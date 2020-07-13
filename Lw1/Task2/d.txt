@@ -1,0 +1,10 @@
+javascript_is_a_client_side_language.php?how_to_work=hardly
+
+Status Code: 400 Work hard!
+
+Код 400 - это плохой запрос от клиента.
+Ошибка заключается в том, что в качестве значения параметра how_to_work передана строка не проходящая условие.
+
+Для исправления в качестве значения параметра следует передать строку hard.
+Либо изменить условие.
+if (!isset($_GET['how_to_work']) || $_GET['how_to_work'] != 'hardly')  
