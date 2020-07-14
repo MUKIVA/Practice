@@ -1,0 +1,13 @@
+C:\GitHub\Practice\Lw2\task2\print_args\bin\Debug\netcoreapp3.1\print_args.exe
+C:\GitHub\Practice\Lw2\task2\print_args\bin\Debug\netcoreapp3.1\print_args.deps.json
+C:\GitHub\Practice\Lw2\task2\print_args\bin\Debug\netcoreapp3.1\print_args.runtimeconfig.json
+C:\GitHub\Practice\Lw2\task2\print_args\bin\Debug\netcoreapp3.1\print_args.runtimeconfig.dev.json
+C:\GitHub\Practice\Lw2\task2\print_args\bin\Debug\netcoreapp3.1\print_args.dll
+C:\GitHub\Practice\Lw2\task2\print_args\bin\Debug\netcoreapp3.1\print_args.pdb
+C:\GitHub\Practice\Lw2\task2\print_args\obj\Debug\netcoreapp3.1\print_args.csprojAssemblyReference.cache
+C:\GitHub\Practice\Lw2\task2\print_args\obj\Debug\netcoreapp3.1\print_args.AssemblyInfoInputs.cache
+C:\GitHub\Practice\Lw2\task2\print_args\obj\Debug\netcoreapp3.1\print_args.AssemblyInfo.cs
+C:\GitHub\Practice\Lw2\task2\print_args\obj\Debug\netcoreapp3.1\print_args.csproj.CoreCompileInputs.cache
+C:\GitHub\Practice\Lw2\task2\print_args\obj\Debug\netcoreapp3.1\print_args.dll
+C:\GitHub\Practice\Lw2\task2\print_args\obj\Debug\netcoreapp3.1\print_args.pdb
+C:\GitHub\Practice\Lw2\task2\print_args\obj\Debug\netcoreapp3.1\print_args.genruntimeconfig.cache

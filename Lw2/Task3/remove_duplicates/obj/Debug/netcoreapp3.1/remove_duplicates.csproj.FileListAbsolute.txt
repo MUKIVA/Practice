@@ -1,0 +1,13 @@
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\bin\Debug\netcoreapp3.1\remove_duplicates.exe
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\bin\Debug\netcoreapp3.1\remove_duplicates.deps.json
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\bin\Debug\netcoreapp3.1\remove_duplicates.runtimeconfig.json
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\bin\Debug\netcoreapp3.1\remove_duplicates.runtimeconfig.dev.json
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\bin\Debug\netcoreapp3.1\remove_duplicates.dll
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\bin\Debug\netcoreapp3.1\remove_duplicates.pdb
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\obj\Debug\netcoreapp3.1\remove_duplicates.csprojAssemblyReference.cache
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\obj\Debug\netcoreapp3.1\remove_duplicates.AssemblyInfoInputs.cache
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\obj\Debug\netcoreapp3.1\remove_duplicates.AssemblyInfo.cs
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\obj\Debug\netcoreapp3.1\remove_duplicates.csproj.CoreCompileInputs.cache
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\obj\Debug\netcoreapp3.1\remove_duplicates.dll
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\obj\Debug\netcoreapp3.1\remove_duplicates.pdb
+C:\GitHub\Practice\Lw2\task3\remove_duplicates\obj\Debug\netcoreapp3.1\remove_duplicates.genruntimeconfig.cache

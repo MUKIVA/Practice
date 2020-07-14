@@ -1,0 +1,13 @@
+C:\GitHub\Practice\Lw2\Task1\print_hello\bin\Debug\netcoreapp3.1\print_hello.exe
+C:\GitHub\Practice\Lw2\Task1\print_hello\bin\Debug\netcoreapp3.1\print_hello.deps.json
+C:\GitHub\Practice\Lw2\Task1\print_hello\bin\Debug\netcoreapp3.1\print_hello.runtimeconfig.json
+C:\GitHub\Practice\Lw2\Task1\print_hello\bin\Debug\netcoreapp3.1\print_hello.runtimeconfig.dev.json
+C:\GitHub\Practice\Lw2\Task1\print_hello\bin\Debug\netcoreapp3.1\print_hello.dll
+C:\GitHub\Practice\Lw2\Task1\print_hello\bin\Debug\netcoreapp3.1\print_hello.pdb
+C:\GitHub\Practice\Lw2\Task1\print_hello\obj\Debug\netcoreapp3.1\print_hello.csprojAssemblyReference.cache
+C:\GitHub\Practice\Lw2\Task1\print_hello\obj\Debug\netcoreapp3.1\print_hello.AssemblyInfoInputs.cache
+C:\GitHub\Practice\Lw2\Task1\print_hello\obj\Debug\netcoreapp3.1\print_hello.AssemblyInfo.cs
+C:\GitHub\Practice\Lw2\Task1\print_hello\obj\Debug\netcoreapp3.1\print_hello.csproj.CoreCompileInputs.cache
+C:\GitHub\Practice\Lw2\Task1\print_hello\obj\Debug\netcoreapp3.1\print_hello.dll
+C:\GitHub\Practice\Lw2\Task1\print_hello\obj\Debug\netcoreapp3.1\print_hello.pdb
+C:\GitHub\Practice\Lw2\Task1\print_hello\obj\Debug\netcoreapp3.1\print_hello.genruntimeconfig.cache
