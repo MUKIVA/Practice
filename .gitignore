@@ -2,3 +2,5 @@
 bin/
 # Ignore obj folder
 obj/
+# ignore .csproj files
+*.csproj
