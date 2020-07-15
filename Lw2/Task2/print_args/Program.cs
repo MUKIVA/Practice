@@ -4,23 +4,20 @@ namespace print_args
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main( string[] args )
         {
-            int count_args = args.Length;
-            if (count_args == 0)
+            int countArgs = args.Length;
+            if ( countArgs == 0 )
             {
-                Console.WriteLine("No parameters were specified!");
+                Console.WriteLine( "No parameters were specified!" );
             }
             else
             {
-                Console.WriteLine("Number of arguments: " + count_args);
-                Console.Write("Arguments: ");
-                foreach (var arg in args)
+                Console.WriteLine( "Number of arguments: " + countArgs );
+                Console.Write( "Arguments: " );
+                foreach ( string arg in args )
                 {
-                    if (arg != null)
-                    {
-                        Console.Write(arg + " ");
-                    }
+                    Console.Write( arg + " " );
                 }
                 Console.WriteLine();
             }
