@@ -41,21 +41,22 @@ namespace PasswordStrength
             while ( index < passString.Length )
             {
                 string temp = passString.Remove( index );
-                if ( getDuplicateCount( index - 1 ) > 1 )
+                int prev = index - 1;
+                if ( getDuplicateCount( prev, passString ) > 1 )
                 {
-                    fine += getDuplicateCount( index - 1 );
+                    fine += getDuplicateCount( prev, passString );
                 }
                 passString = passString.Remove( 0, index );
-                passString = passString.Replace( Convert.ToString( temp[ index - 1 ] ), "" );
+                passString = passString.Replace( Convert.ToString( temp[ prev ] ), "" );
                 passString = temp + passString;
                 index++;
             }
             return fine;
         }
 
-        private int getDuplicateCount( int index )
+        private int getDuplicateCount( int index, string currLine )
         {
-            return _passString.Length - _passString.Replace( Convert.ToString( _passString[ index ] ), "" ).Length;
+            return currLine.Length - currLine.Replace( Convert.ToString( currLine[ index ] ), "" ).Length;
         }
     }
 }
