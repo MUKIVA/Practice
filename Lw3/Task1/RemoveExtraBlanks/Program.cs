@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace RemoveExtraBlanks
 {
@@ -10,10 +11,15 @@ namespace RemoveExtraBlanks
             if ( args.Length != 2 )
             {
                 Console.WriteLine( "Incorrect number of arguments!" );
-                Environment.Exit(0);
+                Environment.Exit( 0 );
             }
-            string pathInput = @"data/" + args[ 0 ] + ".txt";
-            string pathOutput = @"data/" + args[ 1 ] + ".txt";
+            if ( !( new Regex( @".+(\.txt)$" ).IsMatch( args[ 0 ] ) ) || !( new Regex( @".+(\.txt)$" ).IsMatch( args[ 1 ] ) ) )
+            {
+                Console.WriteLine( "One of the specified files is not in the correct format\nPlease use files with \".txt\" extension" );
+                Environment.Exit( 0 );
+            }
+            string pathInput = @"data/" + args[ 0 ];
+            string pathOutput = @"data/" + args[ 1 ];
             if ( File.Exists( pathInput ) && File.Exists( pathOutput ) )
             {
                 using StreamReader fIn = new StreamReader( pathInput );
@@ -22,7 +28,8 @@ namespace RemoveExtraBlanks
                 while ( fIn.Peek() != -1 )
                 {
                     temp = fIn.ReadLine();
-                    temp = System.Text.RegularExpressions.Regex.Replace( temp, @"\s+", " " ).Trim();
+                    temp = new Regex( @" {2,}" ).Replace( temp, " " ).Trim();
+                    temp = new Regex( @"	{2,}" ).Replace( temp, "	" ).Trim();
                     fOut.WriteLine( temp );
                 }
                 Console.WriteLine( "Success" );
