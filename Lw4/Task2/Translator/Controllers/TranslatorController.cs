@@ -1,7 +1,5 @@
 using System.IO;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 
 namespace Translator.Controllers
 {
@@ -10,31 +8,25 @@ namespace Translator.Controllers
     public class TranslatorController : Controller
     {
         [HttpGet]
-        public async Task Translate()
+        public ActionResult<string> Translate( [FromQuery] string word )
         {
-            HttpContext.Response.ContentType = "text/plain; charset=utf-8";
-            bool looking = false;
-            if ( string.IsNullOrEmpty( HttpContext.Request.Query[ "word" ] ) )
-                HttpContext.Response.StatusCode = 400;
+            if ( string.IsNullOrEmpty( word ) )
+                return BadRequest();
             else
             {
-                string word = HttpContext.Request.Query[ "word" ];
                 word = word.ToLower();
-                looking = true;
                 const string TrPath = @"translatorData\data.txt";
                 using StreamReader fIn = new StreamReader( TrPath );
-                while ( fIn.Peek() != -1 && looking )
+                while ( fIn.Peek() != -1 )
                 {
                     string[] trPair = fIn.ReadLine().Split( "=" );
                     if ( word == trPair[ 0 ] )
                     {
-                        await HttpContext.Response.WriteAsync( trPair[ 1 ] );
-                        looking = false;
+                        return Ok( trPair[ 1 ] );
                     }
                 }
             }
-            if ( looking )
-                HttpContext.Response.StatusCode = 404;
+            return NotFound();
         }
     }
 }
