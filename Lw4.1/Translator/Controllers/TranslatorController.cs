@@ -9,7 +9,7 @@ namespace Translator.Controllers
     {
         [HttpGet]
         [ActionName( "en-ru" )]
-        public ActionResult<string> EnRu( [FromQuery] string word )
+        public ActionResult<string> GetTranslationEnToRu( [FromQuery] string word )
         {
             if ( string.IsNullOrEmpty( word ) )
                 return BadRequest();
@@ -32,7 +32,7 @@ namespace Translator.Controllers
 
         [HttpGet]
         [ActionName( "ru-en" )]
-        public ActionResult<string> RuEn( [FromQuery] string word )
+        public ActionResult<string> GetTranslationRuToEn( [FromQuery] string word )
         {
             if ( string.IsNullOrEmpty( word ) )
                 return BadRequest();
