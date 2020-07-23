@@ -14,7 +14,7 @@ namespace MyNotes.Controllers
     [Route( "[controller]/[action]" )]
     public class notesController : Controller
     {
-        JsonSerializerOptions options = new JsonSerializerOptions
+        readonly JsonSerializerOptions _options = new JsonSerializerOptions
         {
 
             WriteIndented = true,
@@ -45,7 +45,7 @@ namespace MyNotes.Controllers
             using ( FileStream fs = new FileStream( PathDb, FileMode.Open ) )
             {
                 db.Add( note );
-                await JsonSerializer.SerializeAsync<List<Note>>( fs, db, options );
+                await JsonSerializer.SerializeAsync<List<Note>>( fs, db, _options );
             }
             return Ok( note );
         }
