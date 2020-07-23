@@ -25,9 +25,9 @@ namespace Translator
             app.UseDeveloperExceptionPage();
             app.UseRouting();
             app.UseEndpoints( endpoits =>
-             {
-                 endpoits.MapControllers();
-             } );
+            {
+                endpoits.MapControllers();
+            } );
         }
     }
 }
