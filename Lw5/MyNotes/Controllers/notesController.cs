@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
-using System;
 using System.Collections.Generic;
 using MyNotes.Models;
 using System.Threading.Tasks;
@@ -12,15 +11,15 @@ namespace MyNotes.Controllers
 {
     [ApiController]
     [Route( "[controller]/[action]" )]
-    public class notesController : Controller
+    public class NotesController : Controller
     {
         readonly JsonSerializerOptions _options = new JsonSerializerOptions
         {
-
             WriteIndented = true,
             Encoder = JavaScriptEncoder.Create( UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic )
         };
         const string PathDb = "Data/db.json";
+
 
         [HttpPost]
         [ActionName( "Add" )]
@@ -31,27 +30,26 @@ namespace MyNotes.Controllers
                 return BadRequest();
             }
             List<Note> db = new List<Note>();
-            using ( FileStream fs = new FileStream( PathDb, FileMode.Open ) )
+            using ( FileStream fs = new FileStream( PathDb, FileMode.OpenOrCreate ) )
             {
                 try
                 {
                     db = await JsonSerializer.DeserializeAsync<List<Note>>( fs );
+                    fs.Seek( 0, SeekOrigin.Begin );
+                    db.Add( note );
+                    await JsonSerializer.SerializeAsync<List<Note>>( fs, db, _options );
                 }
-                catch ( Exception e )
+                catch
                 {
-                    Console.WriteLine( e );
+                    db.Add( note );
+                    await JsonSerializer.SerializeAsync<List<Note>>( fs, db, _options );
                 }
-            }
-            using ( FileStream fs = new FileStream( PathDb, FileMode.Open ) )
-            {
-                db.Add( note );
-                await JsonSerializer.SerializeAsync<List<Note>>( fs, db, _options );
             }
             return Ok( note );
         }
 
         [HttpGet]
-        [ActionName( "list HTTP/1.1" )]
+        [ActionName( "list" )]
         public async Task<ActionResult<Note>> Get()
         {
             List<Note> note = new List<Note>();
